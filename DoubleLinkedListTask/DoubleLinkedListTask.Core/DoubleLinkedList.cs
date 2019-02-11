@@ -61,7 +61,7 @@ namespace DoubleLinkedListTask.Core
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new Enumerator(First);
+            return new Enumerator(_first);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -76,7 +76,7 @@ namespace DoubleLinkedListTask.Core
             public T Current => _current.Value;
             object IEnumerator.Current => Current;
 
-            public Enumerator(IDoubleLinkedListNode<T> first)
+            public Enumerator(DoubleLinkedListNode<T> first)
             {
                 _beforeFirst = new DoubleLinkedListNode<T>
                 {
