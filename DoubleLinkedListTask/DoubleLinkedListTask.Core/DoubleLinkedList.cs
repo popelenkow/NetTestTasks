@@ -48,7 +48,15 @@ namespace DoubleLinkedListTask.Core
 
         public void Reverse()
         {
-            throw new NotImplementedException();
+            var cur = _first;
+            while (cur != null)
+            {
+                var previous = cur.Previous;
+                var next = cur.Next;
+                cur.Previous = next;
+                cur.Next = previous;
+                cur = next;
+            }
         }
 
         public IEnumerator<T> GetEnumerator()
