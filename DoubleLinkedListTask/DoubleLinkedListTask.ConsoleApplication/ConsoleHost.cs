@@ -19,14 +19,15 @@ namespace DoubleLinkedListTask.ConsoleApplication
 
         public void Run()
         {
-            Console.WriteLine("Host started. Enter command.");
+            Console.WriteLine("Host started. Enter command");
             while (!_isExit)
             {
                 Console.WriteLine();
                 try
                 {
-                    var consoleLine = Console.ReadLine();
-                    var (commandName, line) = SplitConsoleLine(consoleLine);
+                    var consoleLine = Console.ReadLine().TrimStart();
+                    var commandName = consoleLine.GetFirstWord();
+                    var line = consoleLine.Substring(commandName.Length).TrimStart();
                     if (_handlers.TryGetValue(commandName, out var handler))
                     {
                         var (parser, command) = handler;
@@ -35,7 +36,7 @@ namespace DoubleLinkedListTask.ConsoleApplication
                     }
                     else
                     {
-                        Console.WriteLine("Unknown command. Enter 'help'.");
+                        Console.WriteLine("Unknown command. Enter 'Help'");
                     }
                 }
                 catch (NotParsedException exception)
@@ -47,14 +48,14 @@ namespace DoubleLinkedListTask.ConsoleApplication
 
         public void RegisterHandler<T>(string commandName, IParser<T> parser, ICommand<T> command)
         {
-            if (IndexOfWhiteSpace(commandName) > -1)
+            if (commandName.IndexOfWhiteSpace() > -1)
                 throw new Exception("Command name should be without spaces");
             _handlers.Add(commandName, (parser, command));
         }
 
         public void RegisterHandler(string commandName, IParser parser, ICommand command)
         {
-            if (IndexOfWhiteSpace(commandName) > -1)
+            if (commandName.IndexOfWhiteSpace() > -1)
                 throw new Exception("Command name should be without spaces");
             _handlers.Add(commandName, (parser, command));
         }
@@ -79,25 +80,6 @@ namespace DoubleLinkedListTask.ConsoleApplication
                     })
                     .ToArray();
             }));
-        }
-
-        private (string commandName, string line) SplitConsoleLine(string consoleLine)
-        {
-            consoleLine = consoleLine.TrimStart();
-            var index = IndexOfWhiteSpace(consoleLine);
-            var commandName = index == -1 ? consoleLine : consoleLine.Substring(0, index);
-            var line = index == -1 ? "" : consoleLine.Substring(index).TrimStart();
-            return (commandName, line);
-        }
-
-        private int IndexOfWhiteSpace(string str)
-        {
-            for (int i = 0; i < str.Length; i++)
-            {
-                if (char.IsWhiteSpace(str[i]))
-                    return i;
-            }
-            return -1;
         }
     }
 }
