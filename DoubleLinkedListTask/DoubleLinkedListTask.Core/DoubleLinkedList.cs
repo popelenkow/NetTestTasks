@@ -57,6 +57,9 @@ namespace DoubleLinkedListTask.Core
                 cur.Next = previous;
                 cur = next;
             }
+            cur = _first;
+            _first = _last;
+            _last = cur;
         }
 
         public IEnumerator<T> GetEnumerator()
