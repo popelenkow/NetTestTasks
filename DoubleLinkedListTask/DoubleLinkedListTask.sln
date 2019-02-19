@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedListTask.Core", "DoubleLinkedListTask.Core\DoubleLinkedListTask.Core.csproj", "{671F9587-43CD-4AB7-8AF9-4B0657D25298}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleLinkedListTask.Core", "DoubleLinkedListTask.Core\DoubleLinkedListTask.Core.csproj", "{671F9587-43CD-4AB7-8AF9-4B0657D25298}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedListTask.ConsoleApplication", "DoubleLinkedListTask.ConsoleApplication\DoubleLinkedListTask.ConsoleApplication.csproj", "{58A0BCD2-D3FE-4222-A00E-ACEEA7F508E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleLinkedListTask.ConsoleApplication", "DoubleLinkedListTask.ConsoleApplication\DoubleLinkedListTask.ConsoleApplication.csproj", "{58A0BCD2-D3FE-4222-A00E-ACEEA7F508E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedListTask.Core.Tests", "DoubleLinkedListTask.Core.Tests\DoubleLinkedListTask.Core.Tests.csproj", "{D02DCC6A-3528-475E-8B47-B3CA157E91E9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C599C1F2-B90E-488B-A3ED-6D3FBFD96793}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2229D700-1BD5-4651-8BCC-74A8E911ABE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Tests", ".Tests", "{DC45FE6F-A07C-40BC-A41E-EBC11BE4F6D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoubleLinkedListTask.Core.Specs", "DoubleLinkedListTask.Core.Specs\DoubleLinkedListTask.Core.Specs.csproj", "{9090899B-19CB-468C-8062-DB6A4C9F8FDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,13 +29,18 @@ Global
 		{58A0BCD2-D3FE-4222-A00E-ACEEA7F508E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58A0BCD2-D3FE-4222-A00E-ACEEA7F508E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58A0BCD2-D3FE-4222-A00E-ACEEA7F508E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D02DCC6A-3528-475E-8B47-B3CA157E91E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D02DCC6A-3528-475E-8B47-B3CA157E91E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D02DCC6A-3528-475E-8B47-B3CA157E91E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D02DCC6A-3528-475E-8B47-B3CA157E91E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9090899B-19CB-468C-8062-DB6A4C9F8FDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9090899B-19CB-468C-8062-DB6A4C9F8FDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9090899B-19CB-468C-8062-DB6A4C9F8FDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9090899B-19CB-468C-8062-DB6A4C9F8FDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{671F9587-43CD-4AB7-8AF9-4B0657D25298} = {2229D700-1BD5-4651-8BCC-74A8E911ABE9}
+		{58A0BCD2-D3FE-4222-A00E-ACEEA7F508E3} = {C599C1F2-B90E-488B-A3ED-6D3FBFD96793}
+		{9090899B-19CB-468C-8062-DB6A4C9F8FDE} = {DC45FE6F-A07C-40BC-A41E-EBC11BE4F6D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9AA8C0F3-8CFD-4F9B-A250-1BE4E8922307}
