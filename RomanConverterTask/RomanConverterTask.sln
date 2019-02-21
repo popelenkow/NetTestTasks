@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{C599C1F2-B90E-488B-A3ED-6D3FBFD96793}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2229D700-1BD5-4651-8BCC-74A8E911ABE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".Tests", ".Tests", "{DC45FE6F-A07C-40BC-A41E-EBC11BE4F6D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanConverterTask.Core.Specs", "RomanConverterTask.Core.Specs\RomanConverterTask.Core.Specs.csproj", "{F28EAA69-99B7-4CFD-ABEC-E97E33919447}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanConverterTask.Core", "RomanConverterTask.Core\RomanConverterTask.Core.csproj", "{15F1E137-A0F7-4D70-B773-B052A78A5F4F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RomanConverterTask.ConsoleApplication", "RomanConverterTask.ConsoleApplication\RomanConverterTask.ConsoleApplication.csproj", "{470FE51F-FF95-48E2-B997-81A184C847FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F28EAA69-99B7-4CFD-ABEC-E97E33919447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28EAA69-99B7-4CFD-ABEC-E97E33919447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28EAA69-99B7-4CFD-ABEC-E97E33919447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28EAA69-99B7-4CFD-ABEC-E97E33919447}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F1E137-A0F7-4D70-B773-B052A78A5F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F1E137-A0F7-4D70-B773-B052A78A5F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F1E137-A0F7-4D70-B773-B052A78A5F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F1E137-A0F7-4D70-B773-B052A78A5F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470FE51F-FF95-48E2-B997-81A184C847FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470FE51F-FF95-48E2-B997-81A184C847FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470FE51F-FF95-48E2-B997-81A184C847FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470FE51F-FF95-48E2-B997-81A184C847FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F28EAA69-99B7-4CFD-ABEC-E97E33919447} = {DC45FE6F-A07C-40BC-A41E-EBC11BE4F6D9}
+		{15F1E137-A0F7-4D70-B773-B052A78A5F4F} = {2229D700-1BD5-4651-8BCC-74A8E911ABE9}
+		{470FE51F-FF95-48E2-B997-81A184C847FE} = {C599C1F2-B90E-488B-A3ED-6D3FBFD96793}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9AA8C0F3-8CFD-4F9B-A250-1BE4E8922307}
+	EndGlobalSection
+EndGlobal
